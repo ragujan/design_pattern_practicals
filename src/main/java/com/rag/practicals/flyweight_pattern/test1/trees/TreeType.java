@@ -1,4 +1,4 @@
-package com.rag.practicals.flyweight.test1.trees;
+package com.rag.practicals.flyweight_pattern.test1.trees;
 
 import java.awt.*;
 

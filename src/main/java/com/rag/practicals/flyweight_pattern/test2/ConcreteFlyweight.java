@@ -1,4 +1,4 @@
-package com.rag.practicals.flyweight.test2;
+package com.rag.practicals.flyweight_pattern.test2;
 
 public class ConcreteFlyweight implements Flyweight{
     private String intrinsicState;

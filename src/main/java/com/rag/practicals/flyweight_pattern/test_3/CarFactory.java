@@ -1,4 +1,4 @@
-package com.rag.practicals.flyweight.test_3;
+package com.rag.practicals.flyweight_pattern.test_3;
 
 
 import java.awt.*;

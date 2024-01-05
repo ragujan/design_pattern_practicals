@@ -1,8 +1,8 @@
-package com.rag.practicals.flyweight.test1.forest;
+package com.rag.practicals.flyweight_pattern.test1.forest;
 
-import com.rag.practicals.flyweight.test1.trees.Tree;
-import com.rag.practicals.flyweight.test1.trees.TreeFactory;
-import com.rag.practicals.flyweight.test1.trees.TreeType;
+import com.rag.practicals.flyweight_pattern.test1.trees.Tree;
+import com.rag.practicals.flyweight_pattern.test1.trees.TreeFactory;
+import com.rag.practicals.flyweight_pattern.test1.trees.TreeType;
 
 import javax.swing.*;
 import java.awt.*;

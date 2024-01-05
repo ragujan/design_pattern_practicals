@@ -1,4 +1,4 @@
-package com.rag.practicals.flyweight.test_4;
+package com.rag.practicals.flyweight_pattern.test_4;
 
 import java.awt.*;
 import java.util.HashMap;

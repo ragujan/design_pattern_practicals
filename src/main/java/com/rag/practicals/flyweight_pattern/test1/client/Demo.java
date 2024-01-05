@@ -1,6 +1,6 @@
-package com.rag.practicals.flyweight.test1.client;
+package com.rag.practicals.flyweight_pattern.test1.client;
 
-import com.rag.practicals.flyweight.test1.forest.Forest;
+import com.rag.practicals.flyweight_pattern.test1.forest.Forest;
 
 import java.awt.*;
 
