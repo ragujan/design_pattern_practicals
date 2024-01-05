@@ -16,8 +16,8 @@ public class Demo {
 
     private static void init(){
         server = new Server();
-        server.register("admin@example.com", "admin_pass");
-        server.register("user@example.com", "user_pass");
+        server.register("admin", "123");
+        server.register("user", "456");
 
         Middleware middleware = Middleware.link(
                 new ThrottlingMiddleware(2),
@@ -37,7 +37,7 @@ public class Demo {
         do {
             System.out.print("Enter Email: ");
             String email = reader.readLine();
-            System.out.println("Input Password: ");
+            System.out.print("Input Password: ");
             String password = reader.readLine();
             success = server.isValidPassword(email,password);
         }while (!success
