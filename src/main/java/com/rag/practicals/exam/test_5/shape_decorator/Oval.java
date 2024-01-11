@@ -1,12 +1,12 @@
-package com.rag.practicals.flyweight_pattern.test_4;
+package com.rag.practicals.exam.test_5.shape_decorator;
 
 import java.awt.*;
 
-public class Oval implements Shape{
+public class Oval implements Shape {
 
     private boolean fill;
 
-    Color color;
+    protected Color color;
 
     public Oval(boolean fill,Color color) {
         this.fill = fill;
@@ -29,6 +29,8 @@ public class Oval implements Shape{
                g.fillOval(x,y,width,height);
            }
     }
+
+
 
 
 }

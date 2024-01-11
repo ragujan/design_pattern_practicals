@@ -1,8 +1,8 @@
-package com.rag.practicals.flyweight_pattern.test_4;
+package com.rag.practicals.flyweight_pattern.test_4.shape_decorator;
 
 import java.awt.*;
 
-public class Line implements Shape{
+public class Line implements Shape {
     private Color color;
     public Line(Color color){
         System.out.println("Creating line object");
@@ -18,5 +18,10 @@ public class Line implements Shape{
     public void draw(Graphics g, int x, int y, int width, int height) {
         g.setColor(color);
         g.drawLine(x,y,width,height);
+    }
+
+    @Override
+    public ShapeType getShapeType() {
+        return null;
     }
 }

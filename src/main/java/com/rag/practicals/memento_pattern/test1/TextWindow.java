@@ -1,4 +1,4 @@
-package com.rag.practicals.momento_pattern.test1;
+package com.rag.practicals.memento_pattern.test1;
 
 //Originator
 public class TextWindow {
@@ -14,6 +14,7 @@ public class TextWindow {
     }
     public void restore(TextWindowState save){
         this.currentText = new StringBuilder(save.getText());
+        save();
     }
     public void addText(String text){
         currentText.append(text);

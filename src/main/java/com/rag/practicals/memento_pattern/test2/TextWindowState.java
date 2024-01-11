@@ -1,6 +1,6 @@
-package com.rag.practicals.momento_pattern.test1;
+package com.rag.practicals.memento_pattern.test2;
 
-//Momento
+//Memento
 public class TextWindowState {
     private String text;
 
@@ -8,7 +8,7 @@ public class TextWindowState {
         this.text = text;
     }
 
-    public String getText(){
+    public String getText() {
         return text;
     }
 }

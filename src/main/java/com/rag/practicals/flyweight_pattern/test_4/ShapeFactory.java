@@ -1,14 +1,19 @@
 package com.rag.practicals.flyweight_pattern.test_4;
 
+import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Line;
+import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Oval;
+import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Shape;
+import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.ShapeType;
+
 import java.awt.*;
 import java.util.HashMap;
 
 public class ShapeFactory {
-    private static final HashMap<ShapeType, Shape> shapes = new HashMap<ShapeType, Shape>();
+    private static final HashMap<ShapeType, com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Shape> shapes = new HashMap<ShapeType, com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Shape>();
     private static final HashMap<ColorType, Color> colors = new HashMap<ColorType, Color>();
 
 
-    public static Shape getShape(ShapeType type, ColorType colorType) {
+    public static com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Shape getShape(ShapeType type, ColorType colorType) {
         Shape shapeImpl = shapes.get(type);
         Color color = colors.get(colorType);
 

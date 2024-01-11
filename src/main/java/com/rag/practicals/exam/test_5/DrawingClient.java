@@ -1,7 +1,8 @@
-package com.rag.practicals.flyweight_pattern.test_4;
+package com.rag.practicals.exam.test_5;
 
-import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.Shape;
-import com.rag.practicals.flyweight_pattern.test_4.shape_decorator.ShapeType;
+import com.rag.practicals.exam.test_5.shape_decorator.DashedBorderDecorator;
+import com.rag.practicals.exam.test_5.shape_decorator.Shape;
+import com.rag.practicals.exam.test_5.shape_decorator.ShapeType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,13 +10,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class DrawingClient extends JFrame {
     private static final long serialVersionUID = -1350200437285282550L;
     private final int WIDTH;
     private final int HEIGHT;
 
-//    private static final Color colors[] = {Color.RED, Color.GREEN, Color.YELLOW};
+    //    private static final Color colors[] = {Color.RED, Color.GREEN, Color.YELLOW};
     private static int shapeTypeLength = ShapeType.values().length;
 
 
@@ -39,7 +41,9 @@ public class DrawingClient extends JFrame {
                 Graphics g = panel.getGraphics();
 
                 for (int i = 0; i < 20; i++) {
-                    Shape shape = ShapeFactory.getShape(getRandomShape(),getRandomColorType());
+                    ColorType cType = getRandomColorType();
+                    System.out.println("color type is "+cType.name());
+                    Shape shape = ShapeFactory.getShape(getRandomShape(), cType);
                     shape.draw(g, getRandomX(), getRandomY(), 100, 100);
                 }
             }
@@ -51,6 +55,22 @@ public class DrawingClient extends JFrame {
         DrawingClient drawing = new DrawingClient(500, 600);
     }
 
+    public static void main2(String[] args) {
+        int count = 3; // Change this value to the desired count
+
+        int randomNumber = pickRandomNumber(count);
+        for (int i = 0; i <20 ; i++) {
+            System.out.println(pickRandomNumber(count));
+        }
+//        System.out.println("Randomly picked number: " + randomNumber);
+
+    }
+
+    private static int pickRandomNumber(int count) {
+        Random random = new Random();
+        return random.nextInt(count );
+    }
+
     private ShapeType getRandomShape() {
         List<ShapeType> shapeTypeList = Arrays.asList(ShapeType.values());
         return shapeTypeList.get((int) (Math.random() * shapeTypeLength));
@@ -58,9 +78,8 @@ public class DrawingClient extends JFrame {
 
     private ColorType getRandomColorType() {
         List<ColorType> colorTypeList = Arrays.asList(ColorType.values());
-        int t = (int)Math.random() * colorTypeList.size();
-        System.out.println(colorTypeList.size());
-        return colorTypeList.get(1);
+        int random = pickRandomNumber(colorTypeList.size());
+        return colorTypeList.get(random);
     }
 
     private int getRandomX() {

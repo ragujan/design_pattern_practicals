@@ -1,8 +1,10 @@
-package com.rag.practicals.momento_pattern.test1;
+package com.rag.practicals.memento_pattern.test1;
 
 //Caretaker
 public class TextEditor {
+    //    Momento
     private TextWindow textWindow;
+    //    Originator
     private TextWindowState textWindowState;
 
     public void write(String text) {
@@ -22,7 +24,9 @@ public class TextEditor {
     }
 
     public void hitUndo() {
-        textWindow.restore(textWindowState);
+        if(textWindowState!=null){
+            textWindow.restore(textWindowState);
+        }
     }
 
 
