@@ -20,8 +20,10 @@ public class ScrollablePanelExample {
         mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
+        mainPanel.setBackground(Color.YELLOW);
         scrollPane = new JScrollPane(mainPanel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
 
         JButton addButton = new JButton("Add Panel");
         addButton.addActionListener(new ActionListener() {
